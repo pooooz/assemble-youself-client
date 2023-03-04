@@ -2,6 +2,7 @@ export interface ThemeColors {
   main: string;
   text: string;
   textWithBackground: string;
+  errorText: string;
   activeLink: string;
   background: string;
 }

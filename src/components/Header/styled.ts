@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import logo from 'assets/icons/logo.svg';
 
-const HEADER_MIN_HEIGHT = 5;
+const HEADER_MIN_HEIGHT = 10;
 
 export const HeaderContainer = styled.header`
   min-height: ${HEADER_MIN_HEIGHT}vh;

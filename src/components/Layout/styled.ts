@@ -5,7 +5,8 @@ import topBackground from 'assets/images/topBackground.png';
 const FULL = 100;
 
 export const MainContainer = styled.main`
-  flex: 1
+  flex: 1;
+  padding: ${({ theme }) => theme.spaces.xl}px 0;
 `;
 
 export const TopBackgroundImage = styled.img.attrs(() => ({

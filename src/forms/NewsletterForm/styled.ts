@@ -20,7 +20,7 @@ export const Title = styled.h4`
 `;
 
 export const TextFieldWithMargin = styled(TextField).attrs(() => ({
-  style: {
+  containerStyle: {
     marginTop: '10px'
   }
 }))``;

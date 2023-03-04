@@ -1,2 +1,3 @@
 export * from './GradientButton';
-export * from './FlexWrap';
+export * from './Wraps';
+export * from './Containers';

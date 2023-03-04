@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 const BUTTON_MIN_WIDTH = 200;
+const BUTTON_MIN_WIDTH_TABLET = 120;
 const BUTTON_MIN_HEIGHT = 60;
+const BUTTON_MIN_HEIGHT_TABLET = 40;
 
 const BUTTON_BORDER_WIDTH = 3;
 const BUTTON_BORDER_COLOR = '#CCF1FF7F';
@@ -18,4 +20,9 @@ export const GradientButton = styled.button`
   background: ${BUTTON_BACKGROUND};
   border: ${BUTTON_BORDER_WIDTH}px solid ${BUTTON_BORDER_COLOR};
   border-radius: ${BUTTON_BORDER_RADIUS}px;
+
+  @media screen and ${({ theme }) => theme.device.tablet} {
+    min-width: ${BUTTON_MIN_WIDTH_TABLET}px;
+    min-height: ${BUTTON_MIN_HEIGHT_TABLET}px;
+  }
 `;
