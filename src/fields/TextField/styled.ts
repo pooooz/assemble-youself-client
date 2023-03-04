@@ -15,6 +15,11 @@ const BORDER_RADIUS = 8;
 
 const LABEL_COLOR = '#828282';
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const TextInput = styled(Field).attrs(() => ({
   type: 'text'
 }))<TextInputProps>`
@@ -36,4 +41,9 @@ export const Label = styled.label`
   font-family: Inter, sans-serif;
   margin: 0 0 ${({ theme }) => theme.spaces.s}px 0;
   color: ${LABEL_COLOR};
+`;
+
+export const ErrorMessageWrap = styled.p`
+  color: ${({ theme }) => theme.colors.errorText};
+  font-size: 15px;
 `;

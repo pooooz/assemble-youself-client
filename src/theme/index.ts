@@ -11,6 +11,7 @@ const light: ThemeColors = {
   main: '#6A1B1B',
   text: '#000000',
   textWithBackground: '#FFFFFF',
+  errorText: '#E57373',
   activeLink: '#185942',
   background: '#ffffff'
 };
