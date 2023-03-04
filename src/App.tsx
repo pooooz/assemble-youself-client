@@ -2,14 +2,14 @@ import React, { useMemo, useState } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import { getColoredTheme } from 'theme';
+import { ThemeNames } from 'types/theme';
 
 import { ThemePreferenceContext } from 'utils/context';
 
-import { ThemeNames } from 'types/theme';
-
 import { GlobalStyles } from './globalStyles';
 import { router } from './routes';
+
+import { getColoredTheme } from 'theme';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState<ThemeNames>('dark');

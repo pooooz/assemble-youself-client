@@ -14,5 +14,7 @@ export const TopBackgroundImage = styled.img.attrs(() => ({
 }))`
   position: absolute;
   width: ${FULL}%;
+  height: ${FULL}%;
   z-index: -1;
+  overflow: hidden;
 `;
