@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 const FULL = 100;
 
+const DEFAULT_FONT_WEIGHT = 500;
+
 export const GlobalStyles = createGlobalStyle`
   html {
     height: ${FULL}%;
@@ -20,6 +22,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: Roboto, sans-serif;
     box-sizing: border-box;
     color: ${({ theme }) => theme.colors.text};
+    font-weight: ${DEFAULT_FONT_WEIGHT};
     padding: 0;
     margin: 0;
   }

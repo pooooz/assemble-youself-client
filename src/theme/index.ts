@@ -10,6 +10,7 @@ import {
 const light: ThemeColors = {
   main: '#6A1B1B',
   text: '#000000',
+  textWithBackground: '#FFFFFF',
   activeLink: '#185942',
   background: '#ffffff'
 };
@@ -43,7 +44,7 @@ export const device: ThemeDeviceQueries = {
 
 const spaces: ThemeScaleValues = {
   s: 5,
-  m: 7,
+  m: 16,
   l: 20,
   xl: 64
 };

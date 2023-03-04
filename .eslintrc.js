@@ -33,16 +33,19 @@ module.exports = {
     },
     alias: {
       map: [
+        ['assets', './src/assets'],
         ['api', './src/api'],
+        ['constants', './src/constants'],
+        ['store', './src/store'],
         ['components', './src/components'],
         ['HOCs', './src/HOCs'],
+        ['forms', './src/forms'],
+        ['fields', './src/fields'],
         ['pages', './src/pages'],
-        ['utils', './src/utils'],
-        ['constants', './src/constants'],
         ['types', './src/types'],
-        ['store', './src/store'],
-        ['theme', './src/theme/index'],
-        ['styled', './src/styled']
+        ['utils', './src/utils'],
+        ['styled', './src/styled/index'],
+        ['theme', './src/theme/index']
       ],
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }
@@ -68,6 +71,7 @@ module.exports = {
         requireLast: true
       }
     }],
+    'react/jsx-props-no-spreading': 0,
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -99,12 +103,22 @@ module.exports = {
         ],
         pathGroups: [
           {
+            pattern: 'assets/**',
+            group: 'internal',
+            position: 'after'
+          },
+          {
             pattern: 'api/**',
             group: 'internal',
             position: 'after'
           },
           {
-            pattern: 'pages/**',
+            pattern: 'constants/**',
+            group: 'internal',
+            position: 'after'
+          },
+          {
+            pattern: 'store/**',
             group: 'internal',
             position: 'after'
           },
@@ -119,11 +133,17 @@ module.exports = {
             position: 'after'
           },
           {
-            pattern: 'store/**',
-            group: 'internal'
+            pattern: 'forms/**',
+            group: 'internal',
+            position: 'after'
           },
           {
-            pattern: 'utils/**',
+            pattern: 'fields/**',
+            group: 'internal',
+            position: 'after'
+          },
+          {
+            pattern: 'pages/**',
             group: 'internal',
             position: 'after'
           },
@@ -133,8 +153,19 @@ module.exports = {
             position: 'after'
           },
           {
-            pattern: 'assets/**',
-            group: 'internal'
+            pattern: 'utils/**',
+            group: 'internal',
+            position: 'after'
+          },
+          {
+            pattern: 'styled',
+            group: 'sibling',
+            position: 'after'
+          },
+          {
+            pattern: 'theme',
+            group: 'sibling',
+            position: 'after'
           },
           {
             pattern: './components/**',
@@ -144,11 +175,6 @@ module.exports = {
           {
             pattern: './interfaces/**',
             group: 'sibling',
-            position: 'after'
-          },
-          {
-            pattern: 'styled',
-            group: 'internal',
             position: 'after'
           },
           {
