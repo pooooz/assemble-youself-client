@@ -1,18 +1,22 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
-import { Layout } from 'components/Layout';
+import { BasicLayout, LayoutWithGradient } from 'components/Layouts';
 
 import { Home } from 'pages/Home';
 import { LogIn } from 'pages/LogIn';
 import { SignUp } from 'pages/SignUp';
+import { Courses } from 'pages/Courses';
+import { Course } from 'pages/Course';
+import { AboutUs } from 'pages/AboutUs';
 
-import { publicRoutePaths } from './constants';
+import { privateRoutePaths, publicRoutePaths } from './constants';
+import { PrivateRoute } from './PrivateRoute';
 
 export const routes = [
   {
     path: '/',
-    element: <Layout />,
+    element: <LayoutWithGradient />,
     children: [
       {
         path: publicRoutePaths.home,
@@ -25,6 +29,34 @@ export const routes = [
       {
         path: publicRoutePaths.signUp,
         element: <SignUp />
+      },
+      {
+        path: publicRoutePaths.aboutUs,
+        element: <AboutUs />
+      }
+    ]
+  },
+  {
+    path: `/${privateRoutePaths.courses}`,
+    element: (
+      <BasicLayout />
+    ),
+    children: [
+      {
+        path: '',
+        element: (
+          <PrivateRoute>
+            <Courses />
+          </PrivateRoute>
+        )
+      },
+      {
+        path: `/${privateRoutePaths.courses}/:courseId`,
+        element: (
+          <PrivateRoute>
+            <Course />
+          </PrivateRoute>
+        )
       }
     ]
   }

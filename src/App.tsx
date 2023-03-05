@@ -1,6 +1,9 @@
 import React, { useMemo, useState } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import { Provider } from 'react-redux';
+
+import { store } from 'store/index';
 
 import { ThemeNames } from 'types/theme';
 
@@ -22,12 +25,14 @@ const App = () => {
   const theme = getColoredTheme(currentTheme);
 
   return (
-    <ThemePreferenceContext.Provider value={themeContextProviderValue}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <RouterProvider router={router} />
-      </ThemeProvider>
-    </ThemePreferenceContext.Provider>
+    <Provider store={store}>
+      <ThemePreferenceContext.Provider value={themeContextProviderValue}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <RouterProvider router={router} />
+        </ThemeProvider>
+      </ThemePreferenceContext.Provider>
+    </Provider>
   );
 };
 

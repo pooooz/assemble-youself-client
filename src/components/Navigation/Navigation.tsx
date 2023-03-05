@@ -1,17 +1,34 @@
 import React from 'react';
 
-import { publicRoutePaths, routeLabelsMap } from 'routes/constants';
+import { privateRoutePaths, publicRoutePaths, routeLabelsMap } from 'routes/constants';
+
+import { useAppSelector } from 'store/hooks';
+import { selectAuth } from 'store/auth/selectors';
 
 import { capitalize } from 'utils/helpers';
 
 import { Link, NavElement, NavigationContainer } from './styled';
 
-export const Navigation = () => (
-  <NavigationContainer>
-    {Object.keys(publicRoutePaths).map((route) => (
-      <NavElement key={route}>
-        <Link to={route}>{capitalize(routeLabelsMap.get(route as keyof typeof publicRoutePaths) || '')}</Link>
-      </NavElement>
-    ))}
-  </NavigationContainer>
-);
+export const Navigation = () => {
+  const isAuth = useAppSelector(selectAuth);
+
+  return isAuth
+    ? (
+      <NavigationContainer>
+        {Object.keys(privateRoutePaths).map((routeKey) => (
+          <NavElement key={routeKey}>
+            <Link to={`/${privateRoutePaths[routeKey as keyof typeof privateRoutePaths]}`}>{capitalize(routeLabelsMap.get(routeKey as keyof typeof privateRoutePaths) || '')}</Link>
+          </NavElement>
+        ))}
+      </NavigationContainer>
+      )
+    : (
+      <NavigationContainer>
+        {Object.keys(publicRoutePaths).map((routeKey) => (
+          <NavElement key={routeKey}>
+            <Link to={`/${publicRoutePaths[routeKey as keyof typeof publicRoutePaths]}`}>{capitalize(routeLabelsMap.get(routeKey as keyof typeof publicRoutePaths) || '')}</Link>
+          </NavElement>
+        ))}
+      </NavigationContainer>
+      );
+};

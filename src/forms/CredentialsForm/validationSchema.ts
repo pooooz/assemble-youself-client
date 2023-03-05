@@ -5,7 +5,7 @@ import { Target } from './types';
 const requiredMessage = 'Обязательное поле!';
 
 const minNameLength = 3;
-const minPasswordLength = 5;
+const minPasswordLength = 8;
 
 const nameLengthErrorMessage = `Количество символов в имени должно быть больше, чем ${minNameLength}!`;
 const emailFormatErrorMessage = 'Неверный формат email!';

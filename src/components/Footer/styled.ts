@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import footerBackground from 'assets/images/footer-background.jpg';
 
-import { Wraps } from 'styled';
+import { FlexWrap } from 'styled';
 
 const CENTERED_WRAP_MAX_WIDTH = 350;
 
@@ -11,7 +11,7 @@ const TEXT_LINE_HEIGHT = 30;
 const COPYRIGHT_BACKGROUND = '#11173B';
 const COPYRIGHT_COLOR = '#2A2F56';
 
-export const FlexWrapWithPaddings = styled(Wraps)`
+export const FlexWrapWithPaddings = styled(FlexWrap)`
   display: flex;
   padding: ${({ theme }) => theme.spaces.xl}px;
 

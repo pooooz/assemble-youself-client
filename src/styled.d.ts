@@ -1,6 +1,6 @@
 import 'styled-components';
 
-import { ThemeColors, ThemeDeviceQueries, ThemeScaleValues } from 'types/index';
+import { ThemeColors, ThemeDeviceQueries, ThemeScaleValues } from 'types/theme';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
