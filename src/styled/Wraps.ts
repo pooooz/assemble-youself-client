@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const FULL = 100;
 
-export const Wraps = styled.div`
+export const FlexWrap = styled.div`
   display: flex;
 `;
 

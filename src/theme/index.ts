@@ -10,6 +10,8 @@ import {
 const light: ThemeColors = {
   main: '#6A1B1B',
   text: '#000000',
+  heading: '#0B1033',
+  dim: '#7C8D93',
   textWithBackground: '#FFFFFF',
   errorText: '#E57373',
   activeLink: '#185942',
@@ -26,7 +28,7 @@ const deviceWidth = {
   mobileS: 320,
   mobileM: 375,
   mobileL: 425,
-  tablet: 768,
+  tablet: 825,
   laptop: 1024,
   laptopL: 1440,
   desktop: 1920
@@ -58,7 +60,7 @@ const fontSizes: ThemeScaleValues = {
 };
 
 export const getColoredTheme = (currentTheme: ThemeNames): DefaultTheme => ({
-  colors: (colors.get(currentTheme) != null) || light,
+  colors: colors.get(currentTheme) || light,
   fontSizes,
   spaces,
   device

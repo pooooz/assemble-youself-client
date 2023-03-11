@@ -65,6 +65,8 @@ module.exports = {
     'import/no-cycle': 0,
     '@typescript-eslint/strict-boolean-expressions': 0,
     '@typescript-eslint/prefer-nullish-coalescing': 0,
+    'no-param-reassign': 0,
+    '@typescript-eslint/array-type': 0,
     '@typescript-eslint/member-delimiter-style': ['error', {
       multiline: {
         delimiter: 'semi', // 'none' or 'semi' or 'comma'

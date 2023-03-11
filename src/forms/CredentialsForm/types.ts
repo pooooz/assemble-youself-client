@@ -1,5 +1,5 @@
 export interface CredentialsFormValues {
-  name: string;
+  name?: string;
   email: string;
   password: string;
 }

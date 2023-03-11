@@ -11,11 +11,16 @@ import {
 import { getValidationSchema } from './validationSchema';
 
 export const CredentialsForm = ({ target, onSubmit, headingText }: CredentialsFormProps) => {
-  const initialValues: CredentialsFormValues = {
-    name: '',
-    email: '',
-    password: ''
-  };
+  const initialValues: CredentialsFormValues = target === 'registration'
+    ? {
+        name: '',
+        email: '',
+        password: ''
+      }
+    : {
+        email: '',
+        password: ''
+      };
 
   return (
     <Formik<CredentialsFormValues>
