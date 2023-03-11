@@ -5,7 +5,3 @@ export interface CourseData {
   description: string;
   startDate: string;
 }
-export interface SideBarData {
-  id: number;
-  title: string;
-}
