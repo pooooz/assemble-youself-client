@@ -10,7 +10,7 @@ const AUTH_FORM_BACKGROUND_RADIUS = 16;
 const AUTH_FORM_SHADOW_OFFSET = 5;
 const AUTH_FORM_SHADOW_COLOR = 'rgba(0, 0, 0, 0.5)';
 
-export const AuthFormContainer = styled.section`
+export const FormContainer = styled.section`
   width: ${AUTH_FORM_WIDTH}%;
   padding:
     ${({ theme }) => theme.spaces.m}px

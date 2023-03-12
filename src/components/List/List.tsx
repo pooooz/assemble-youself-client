@@ -9,8 +9,6 @@ export const List = <T, >({
   container: Container,
   containerStyle
 }: ListProps<T>) => {
-  console.log('there');
-
   if (Container) {
     return (
       <Container style={containerStyle}>

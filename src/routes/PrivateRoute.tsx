@@ -9,10 +9,8 @@ import { PrivateRouteProps } from './types';
 
 export const PrivateRoute = ({ children }: PrivateRouteProps) => {
   const isAuth = useAppSelector(selectAuth);
-  console.log('rendered');
 
   if (!isAuth) {
-    console.log('here');
     return <Navigate to={`/${publicRoutePaths.logIn}`} />;
   }
 

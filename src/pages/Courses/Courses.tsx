@@ -4,14 +4,17 @@ import { List } from 'components/List';
 
 import { Sidebar } from './Sidebar';
 import { CoursePreview } from './CoursePreview';
-import { CoursesContainer, GridContainer, Heading, ListContainer } from './styled';
+import { CoursesContainer, FlexWrapWithSpaceBetween, GridContainer, Heading, ListContainer } from './styled';
 import { coursesMock } from './mocks';
 
-import { FlexWrap } from 'styled';
+import { FlexWrap, GradientLink } from 'styled';
 
 export const Courses = () => (
   <CoursesContainer>
-    <Heading>Курсы</Heading>
+    <FlexWrapWithSpaceBetween>
+      <Heading>Курсы</Heading>
+      <GradientLink to="/create-course">Создать курс</GradientLink>
+    </FlexWrapWithSpaceBetween>
     <GridContainer>
       <FlexWrap style={{ flexGrow: 2 }}>
         <List

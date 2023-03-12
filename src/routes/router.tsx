@@ -9,6 +9,7 @@ import { SignUp } from 'pages/SignUp';
 import { Courses } from 'pages/Courses';
 import { Course } from 'pages/Course';
 import { AboutUs } from 'pages/AboutUs';
+import { CreateCourse } from 'pages/CreateCourse';
 
 import { privateRoutePaths, publicRoutePaths } from './constants';
 import { PrivateRoute } from './PrivateRoute';
@@ -33,6 +34,14 @@ export const routes = [
       {
         path: publicRoutePaths.aboutUs,
         element: <AboutUs />
+      },
+      {
+        path: 'create-course',
+        element: (
+          <PrivateRoute>
+            <CreateCourse />
+          </PrivateRoute>
+        )
       }
     ]
   },

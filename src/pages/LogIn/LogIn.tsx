@@ -7,7 +7,7 @@ import { changeAuth } from 'store/auth/slice';
 import { CredentialsForm } from 'forms/CredentialsForm';
 import { CredentialsFormValues } from 'forms/CredentialsForm/types';
 
-import { AuthFormContainer, CenteredFullSizeWrap } from 'styled';
+import { CenteredFullSizeWrap, FormContainer } from 'styled';
 
 export const LogIn = () => {
   const dispatch = useAppDispatch();
@@ -23,13 +23,13 @@ export const LogIn = () => {
 
   return (
     <CenteredFullSizeWrap>
-      <AuthFormContainer>
+      <FormContainer>
         <CredentialsForm
           target="login"
           headingText="Вход"
           onSubmit={onSubmit}
         />
-      </AuthFormContainer>
+      </FormContainer>
     </CenteredFullSizeWrap>
   );
 };

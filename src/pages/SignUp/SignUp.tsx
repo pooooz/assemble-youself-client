@@ -3,7 +3,7 @@ import React from 'react';
 import { CredentialsFormValues } from 'forms/CredentialsForm/types';
 import { CredentialsForm } from 'forms/CredentialsForm';
 
-import { AuthFormContainer, CenteredFullSizeWrap } from 'styled';
+import { CenteredFullSizeWrap, FormContainer } from 'styled';
 
 export const SignUp = () => {
   const onSubmit = (values: CredentialsFormValues) => {
@@ -12,13 +12,13 @@ export const SignUp = () => {
 
   return (
     <CenteredFullSizeWrap>
-      <AuthFormContainer>
+      <FormContainer>
         <CredentialsForm
           target="registration"
           headingText="Регистрация"
           onSubmit={onSubmit}
         />
-      </AuthFormContainer>
+      </FormContainer>
     </CenteredFullSizeWrap>
   );
 };
