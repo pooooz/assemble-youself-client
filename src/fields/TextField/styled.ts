@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Field } from 'formik';
 
 import { TextInputProps } from './types';
 
@@ -20,9 +19,7 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
-export const TextInput = styled(Field).attrs(() => ({
-  type: 'text'
-}))<TextInputProps>`
+export const TextInput = styled.input<TextInputProps>`
   font-family: Inter, sans-serif;
   padding: ${VERTICAL_PADDINGS}px ${({ theme }) => theme.spaces.m}px;
   font-size: ${({ theme }) => theme.fontSizes.s}px;

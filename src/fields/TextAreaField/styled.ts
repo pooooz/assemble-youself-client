@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Field } from 'formik';
 
 import { TextAreaProps } from './types';
 
@@ -20,8 +19,7 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
-export const TextArea = styled(Field).attrs(() => ({
-  as: 'textarea',
+export const TextArea = styled.textarea.attrs(() => ({
   rows: 4
 }))<TextAreaProps>`
   font-family: Inter, sans-serif;
@@ -48,5 +46,5 @@ export const Label = styled.label`
 
 export const ErrorMessageWrap = styled.p`
   color: ${({ theme }) => theme.colors.errorText};
-  font-size: 15px;
+  font-size: ${({ theme }) => theme.fontSizes.s}px;
 `;

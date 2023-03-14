@@ -52,6 +52,7 @@ export const CredentialsForm = ({ target, onSubmit, headingText }: CredentialsFo
           <TextFieldWithMargin
             label="Пароль"
             name="password"
+            type="password"
             placeholder="Введите пароль"
             error={Boolean(touched.password && errors.password)}
             errorMessage={errors.password}
